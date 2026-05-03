@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Barlow:wght@400;500;600;700&display=swap');
+
+/* ── RESET ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gold: #ffd000;
+  --gold-glow: rgba(255, 208, 0, 0.45);
+  --black: #0a0a0a;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--black);
+  overflow-x: hidden;
+}
+
+/* ── CONTAINER ── */
+.gp-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ── BACKGROUND ── */
+.gp-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* Dark gradient — heavier on left so text is readable */
+.gp-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(0,0,0,0.92) 0%,
+    rgba(0,0,0,0.82) 45%,
+    rgba(0,0,0,0.30) 75%,
+    rgba(0,0,0,0.10) 100%
+  );
+}
+
+/* ── CONTENT ── */
+.gp-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 50px 60px;
+  max-width: 600px;
+}
+
+/* ── LOGO ── */
+.gp-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--gold);
+  width: fit-content;
+  padding: 14px 28px 14px 16px;
+  border-radius: 50px;
+  box-shadow: 0 0 30px var(--gold-glow), 0 0 60px var(--gold-glow);
+}
+
+.gp-logo-icon {
+  background: var(--black);
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--black);
+}
+
+.gp-logo-icon svg {
+  font-size: 30px;
+  color: var(--gold);
+}
+
+.gp-logo-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--black);
+  letter-spacing: 1px;
+}
+
+/* ── HEADLINE ── */
+.gp-headline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gp-headline h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 46px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.gp-headline h2 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+/* ── DIVIDER ── */
+.gp-divider {
+  width: 220px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  border-radius: 2px;
+}
+
+/* ── BADGE ── */
+.gp-badge {
+  background: var(--gold);
+  color: var(--black);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  padding: 8px 30px;
+  border-radius: 50px;
+  width: fit-content;
+  /* align-self: center;  */
+}
+
+/* ── SERVICES ── */
+.gp-services {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.gp-service {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--white);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.gp-service-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  background: rgba(255, 208, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--gold);
+  font-size: 17px;
+}
+
+/* ── ADDRESS ── */
+.gp-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: var(--white);
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.gp-pin {
+  color: var(--gold);
+  font-size: 24px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.gp-address p {
+  line-height: 1.55;
+}
+
+/* ── PHONE ── */
+.gp-phone {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  background: var(--gold);
+  color: var(--black);
+  text-decoration: none;
+
+  width: fit-content;
+  padding: 16px 40px;
+  border-radius: 60px;
+
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 2px;
+
+  box-shadow: 0 0 30px var(--gold-glow), 0 0 60px var(--gold-glow);
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  margin-top: 4px;
+}
+
+.gp-phone svg {
+  font-size: 26px;
+}
+
+.gp-phone:hover {
+  box-shadow: 0 0 50px var(--gold-glow), 0 0 90px var(--gold-glow);
+}
+
+/* ── TAGLINE ── */
+.gp-tagline {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.gp-tagline p {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.gp-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+  border-radius: 2px;
+}
+
+.gp-tagline .gp-line:last-child {
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+/* ── SCROLL ARROW ── */
+.gp-scroll {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold);
+  font-size: 32px;
+  cursor: pointer;
+  animation: bounce 1.6s ease-in-out infinite;
+  z-index: 3;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(10px); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .gp-content {
+    padding: 32px 24px;
+    max-width: 100%;
+    gap: 18px;
+  }
+
+  .gp-logo-text { font-size: 28px; }
+  .gp-logo-icon { width: 44px; height: 44px; }
+  .gp-logo-icon svg { font-size: 24px; }
+
+  .gp-headline h2 { font-size: 34px; }
+  .gp-badge { font-size: 20px; }
+
+  .gp-service { font-size: 16px; }
+  .gp-address { font-size: 16px; }
+
+  .gp-phone {
+    font-size: 26px;
+    padding: 14px 28px;
+  }
+
+  .gp-tagline p {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+}
