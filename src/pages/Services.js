@@ -10,15 +10,15 @@ import { GiCarWheel } from "react-icons/gi";
 import pneusStock from "../assets/pneus_stock.jpeg";
 
 // Logos marques
-import logoMichelin    from "../assets/logos/michelin_logo.png";
-import logoBridgestone from "../assets/logos/bridgestone_logo.png";
-import logoPirelli     from "../assets/logos/pirelli_logo.png";
-import logoContinental from "../assets/logos/continentale_logo.png";
-import logoUniroyal    from "../assets/logos/uniroyal_logo.png";
-import logoGoodyear    from "../assets/logos/good_year_logo.png";
-import logoDunlop      from "../assets/logos/dunlop_logo.png";
-import logoPetlas      from "../assets/logos/petlas_logo.png";
-import logoVredestein  from "../assets/logos/vredestein_logo.png";
+import logoMichelin    from "../assets/michelin_logo.png";
+import logoBridgestone from "../assets/bridgestone_logo.png";
+import logoPirelli     from "../assets/pirelli_logo.png";
+import logoContinental from "../assets/continentale_logo.png";
+import logoUniroyal    from "../assets/uniroyal_logo.png";
+import logoGoodyear    from "../assets/good_year_logo.png";
+import logoDunlop      from "../assets/dunlop_logo.png";
+import logoPetlas      from "../assets/petlas_logo.png";
+import logoVredestein  from "../assets/vredestein_logo.png";
 
 const brands = [
   { name: "Michelin",     logo: logoMichelin,    dark: false },
